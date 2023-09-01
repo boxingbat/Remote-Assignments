@@ -48,7 +48,7 @@
 ● git log
  
  
- -> showing all the detial for each commit you have done
+ -> showing all the commit you have done
  -> ex.
  commit 7bfd0c833964a7b710a55a4799ee0e49c3dea722 (HEAD -> main, origin/main)
  Author: Mike <boxingbat>
@@ -80,6 +80,10 @@
  -> ex. git checkout branch1 => swich into branch1
  -> ex. git branch -d branch1 => delete branch1
  
+ ● git merge
+ 
+ -> to maerge the branch in to master
+ -> ex. git merge <commit>
  
 ● git push [ repo_name ] [ branch_name ]
  -> updload all the commits/document to github repo, you can only type "git  push" if the repo connecting and main/branch is already set
@@ -91,10 +95,20 @@
  -> git clone " the URL you just fork "
  
 ● (Advanced) git rebase
+-> when we use git merge ,git will only combine the latest version on the branch to the master , the old version/data will stay on the branch
+-> git rebase will transfer all the record from branch to master , that's the reason why there would be more conflict issue by using git rebase than git merge
+-> ex. $ git rebase -i HEAD~~
+ 
 ● (Advanced) git cherry-pick
+-> pick the specify commit you need
+ ->ex.  git cherry-pick fd23e1c 6a498ec f4f4442
+          add user name
+ 
 ● (Advanced) git reflog
+-> show all the detials of git, not only commit (git log will only show you the commits)
+ 
 ● (Advanced) git tag
-
+-> tag would be used in important update , like named the version, mark some special update.
 
 3. Please describe how to establish a GitHub repo and how to upload the local projects to GitHub. Try to explain your answers with as much detail as possible.
  1. use github to create a new repo
