@@ -1,13 +1,13 @@
-/*:
-1. Please create a public GitHub repository named “Remote-Assignments” for uploading your homework. Please send your repository link to us through Discord direct message and we will check your assignments through your repository every week. We need you to structure your folders as below:
+/*
+#1. Please create a public GitHub repository named “Remote-Assignments” for uploading your homework. Please send your repository link to us through Discord direct message and we will check your assignments through your repository every week. We need you to structure your folders as below:
 - Remote-Assignments
 - Week 1 : https://github.com/boxingbat/Remote-Assignments/tree/main/Week1
 - Week 2 : https://github.com/boxingbat/Remote-Assignments/tree/main/Week2/Week2.playground
 - Week 3 : https://github.com/boxingbat/Remote-Assignments/tree/main/Week3/Week3.playground
 - Week 4 : https://github.com/boxingbat/Remote-Assignments/tree/main/Week4/Week4.playground
 
-2. Here are some Git and GitHub commands we usually use in software development. Please explain the meanings and use cases of them.
-● git status
+#2. Here are some Git and GitHub commands we usually use in software development. Please explain the meanings and use cases of them.
+##● git status
  -> clerify which brench we are working right now
  -> it will show the data/document that is modified, untracked, or just added into the temporary storage
  -> ex.
@@ -34,18 +34,21 @@
  修改尚未加入提交（使用 "git add" 和/或 "git commit -a"）
  
  
-● git add
+##● git add
  -> adding documet to staging area (ex add . => add all the modified documents)
  
  
-● git reset
- -> cancel/delete the documnet which in the temporary storage (ex. get reset => delete all the document in the staging area)
+##● git reset
+ -> back to previous version (we can appoint the especial verison by calling the commit no.)
+ -> ex. git reset e12d8ef^^ (each ^ means one step/version backward)
+ -> git reset --soft: data is remained in both staging area and working directory
+ -> git reset --mixed(defult): data is moved back to working directory , but the changes are no longer staged
+ -> git reset --hard: it will be compeletly moved in both working directory and staging area
  
- 
-● git commit
+##● git commit
  -> making the document in the staging  area become a fromal commit , which would be an important message looking any modification in the future
  -> ex.  git commit -m " " (put the title/description you need in " ")
-● git log
+##● git log
  
  
  -> showing all the commit you have done
@@ -69,7 +72,7 @@
      first commit
  
  
-● git branch
+##● git branch
  -> branch is split from main for several development requirements,
  -> ex. git branch => showing all the branch we have , if there is no any other branch ,it would only show "main"
  -> ex.
@@ -80,37 +83,37 @@
  -> ex. git checkout branch1 => swich into branch1
  -> ex. git branch -d branch1 => delete branch1
  
- ● git merge
+ ##● git merge
  
  -> to maerge the branch in to master
  -> ex. git merge <commit>
  
-● git push [ repo_name ] [ branch_name ]
+##● git push [ repo_name ] [ branch_name ]
  -> updload all the commits/document to github repo, you can only type "git  push" if the repo connecting and main/branch is already set
-● git remote
+##● git remote
  -> show the repositories we set ,the defulat should be "orgin"
-● fork
+##● fork
  -> make a indipendant copy for you , which will be save in your own github
  -> ex. click the bottom in upper right corner
  -> git clone " the URL you just fork "
  
-● (Advanced) git rebase
+##● (Advanced) git rebase
 -> when we use git merge ,git will only combine the latest version on the branch to the master , the old version/data will stay on the branch
 -> git rebase will transfer all the record from branch to master , that's the reason why there would be more conflict issue by using git rebase than git merge
 -> ex. $ git rebase -i HEAD~~
  
-● (Advanced) git cherry-pick
+##● (Advanced) git cherry-pick
 -> pick the specify commit you need
  ->ex.  git cherry-pick fd23e1c 6a498ec f4f4442
           add user name
  
-● (Advanced) git reflog
+##● (Advanced) git reflog
 -> show all the detials of git, not only commit (git log will only show you the commits)
  
-● (Advanced) git tag
+##● (Advanced) git tag
 -> tag would be used in important update , like named the version, mark some special update.
 
-3. Please describe how to establish a GitHub repo and how to upload the local projects to GitHub. Try to explain your answers with as much detail as possible.
+#3. Please describe how to establish a GitHub repo and how to upload the local projects to GitHub. Try to explain your answers with as much detail as possible.
  1. use github to create a new repo
  2. following the intrduciton on git hub
  create a new repository on the command line

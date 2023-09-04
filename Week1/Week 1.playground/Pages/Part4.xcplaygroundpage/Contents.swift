@@ -11,7 +11,7 @@ for i in 1...lottoNumbers.count where i > 3 {
 //(through .lottoNumbers.)
 
 //2-1 solution 1
-var reversenum :[Int] = []
+var reversenum: [Int] = []
 for num in lottoNumbers{
     reversenum.insert(num, at:0)
 }
@@ -36,7 +36,7 @@ var i = 0
 var j = 0
 var k = 0
 
-var reversenumWhile :[Int] = []
+var reversenumWhile: [Int] = []
 
 while i < lottoNumbers.count {
     reversenumWhile.insert(lottoNumbers[i], at: 0)
@@ -86,7 +86,7 @@ repeat {
 
 //6. Declare a variable isRaining to record the weather. Please write a statement that if the weather is raining, print “It’s raining, I don’t want to work today.”, otherwise print “Although it’s sunny, I still don’t want to work today.”
 
-var isRaining  :Bool = true
+var isRaining: Bool = true
 
 if isRaining{
     print("It’s raining, I don’t want to work today.")
@@ -106,5 +106,19 @@ if jobLevel == 1 {
 }else if jobLevel == 4 {
     print("Directpr")
 }else {
+    print("We don't have this job")
+}
+
+
+switch jobLevel {
+case 1:
+    print("member")
+case 2:
+    print("Team Leader")
+case 3:
+    print("Manger")
+case 4:
+    print("Director")
+default:
     print("We don't have this job")
 }

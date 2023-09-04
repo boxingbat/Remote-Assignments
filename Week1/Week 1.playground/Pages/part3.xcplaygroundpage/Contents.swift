@@ -1,5 +1,5 @@
 //1. Please initialize an empty array with String data type and assign it to a variable named .myFriends .
-var myfriends : [String] = []
+var myfriends: [String] = []
 
 //2. According to Q1, now I have three friends, ‘Ian’, ‘Bomi’, and ‘Kevin’. Please help me to add their name into myFriends array at once.
 myfriends += ["Ian", "bomi", "Kevin"]
@@ -28,15 +28,18 @@ var answer2 = myfriends[2]
 
 //7. How to get the first element in an array?
 var answer1 = myfriends[0]
-
+var answer11 = myfriends.first
 //8. How to get the last element in an array?
 
-var howManyFriends :Int = myfriends.count
+var howManyFriends: Int = myfriends.count
 var lastfriend = myfriends[howManyFriends-1]
+var lastfriend2: String? = myfriends.last
 print(lastfriend)
+print(lastfriend2 ?? "nofriend")
+
 
 //9. Please initialize a Dictionary with keys of type String, value of type Int, and assign it to a variable named myCountryNumber.
-var myCountrynumber :[String:Int] = [:]
+var myCountrynumber: [String:Int] = [:]
 //10. Please add three values 1, 44, 81 to myCountryNumber for keys ‘US’, ‘GB’, ‘JP’ respectively.
 myCountrynumber["US"] = 1
 myCountrynumber["GB"] = 44
@@ -48,5 +51,7 @@ myCountrynumber["GB"] = 0
 //var emptydictionary :[Keytype:ValueType] = [:]
 
 //13. How to remove a key-value pair in a dictionary?
+myCountrynumber["US"] = nil
+print(myCountrynumber)
 myCountrynumber.removeValue(forKey: "GB")
 print(myCountrynumber)

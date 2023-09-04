@@ -1,17 +1,17 @@
 /*:
-1.Please explain the difference between let and var .
+**1.Please explain the difference between let and var .**
  
  let is going to declar a contant , which should not be changed or modified in the future
  if we are going to change it , use var instead to create a variable
  
  
-2. In Swift, we usually define a variable through the syntax as below:
+**2. In Swift, we usually define a variable through the syntax as below:**
                               .var x: Int = 10.
 We use the formula: 2 * radius * pi to calculate the circumference. Now, please define a variable pi and assign a value to it. You can refer to the syntax above while thinking about using var or let and which data type it should be.
 */
 
-var radius :Double = 10
-let pi :Double = 3.1415926
+var radius: Double = 10
+let pi: Double = 3.1415926
 
 let circumference = radius * pi * 2
 
@@ -21,18 +21,18 @@ print(circumference)
 3. Declare two constants x and y of type Int then assign any value to them. After that, please calculate the average of x and y and store the result in a constant named average .
  */
 
-let x :Int = 6
-let y :Int = 4
+let x: Int = 6
+let y: Int = 4
 
-let avarage:Int = (x + y)/2
+let avarage: Int = (x + y)/2
 
 
 //4. Following Q3, now we want to save the average in a record system, but the system doesn’t accept 65 but 65.0.
 //● Please solve this problem so that we can put the average in the record system.
-let x2 :Double = 6
-let y2 :Double = 5
+let x2: Double = 6
+let y2: Double = 5
 
-let avarage2:Double = (x2 + y2)/2
+let avarage2: Double = (x2 + y2)/2
 
 //● Please explain the difference between ( 10 / 3 ) and ( 10.0 / 3.0 ).
 
@@ -46,8 +46,8 @@ let avarage2:Double = (x2 + y2)/2
 //5. Declare two constants that values are 10 and 3 each, then please calculate the
 //remainder and save the result in a constant named remainder .
 
-let x3 :Int = 10
-let y3 :Int = 3
+let x3: Int = 10
+let y3: Int = 3
 
 let remainder = x3 % y3
 
@@ -55,10 +55,10 @@ let remainder = x3 % y3
 //Ex:.varx=10.=>.varx:Int=10.
 
 
-var flag :Bool = true
-var inputString :String = "Hello world."
-let bitsInBite :Int = 8
-let averageScore :Double = 86.8
+var flag: Bool = true
+var inputString: String = "Hello world."
+let bitsInBite: Int = 8
+let averageScore: Double = 86.8
 
 //7. What is Type Inference in Swift?
 
@@ -78,7 +78,7 @@ let averageScore :Double = 86.8
  3. here is the final answer after debuging
  */
 
-var phoneNumber :String = "0987654321"
+var phoneNumber: String = "0987654321"
  print (phoneNumber)
  phoneNumber = "Hello world."
  print (phoneNumber)

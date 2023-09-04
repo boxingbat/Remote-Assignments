@@ -35,7 +35,7 @@ func multiply (_ a:Int, _ b:Int=10) {
 //greet(person: "Luke")
 //It will return the string: “Hello, Luke”.
 
-func greet (person name : String) -> String {
+func greet (person name: String) -> String {
     return "Hello, \(name)"
 }
 
