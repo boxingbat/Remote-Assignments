@@ -1,7 +1,5 @@
 import UIKit
 
-var greeting = "Hello, playground"
-
 /*
  
  Part 1: Object-Oriented Swift
@@ -78,7 +76,7 @@ if let test = zoo.weeklyHot as? Tiger {
 }
 //4. What is an instance? What does Initilizer do in Class and Struct?
 
-/* instance is like a spec-presence that we have to create at first to make the Struct or Class avaliable.instance is indiviual of both Class and Struct
+/* instance is like a spec-presence that we have to create first to make the Struct or Class avaliable.instance is indiviual of both Class and Struct
     Initializer is the process of making an instance of a class, structure, or enumeration for use
  */
 
@@ -87,13 +85,17 @@ if let test = zoo.weeklyHot as? Tiger {
  Classes are reference types and structs are value types
  Classes can inherit from another class , also can be deinitialized
  
+ structs are value types and do not support inherit. it's immutable, you have to call "mutating
+ if you need to modify
+ 
  */
 
 //6. What’s the difference between reference type and value type ?
 /*
- Value Type: When you copy a value type, the instance keeps it's unique copy of the data. If you change one instance, the others will not change
- Reference Type: When you copy a reference type,the instance shares the data.It only store the location in memmory.  When you change one, the others also change.
+ Value Type: When you copy a value type, the instance keeps it's unique copy of the data. If you change one instance, the others will not changed
+ Reference Type: When you copy a reference type,the instance shares the data.It only store the location in memmory.If you change one, the others also changed.
 
+ 
  */
 
 //7. What’s the difference between instance method and type method ?
@@ -166,9 +168,9 @@ print(Gasoline.gas92.rawValue)
 
 //● Please explain what enum associated value is and how it works.
 /*
- different from rawValue, we can declare if while we building snum
+ different from rawValue, we can declare it while we building enum.
  Raw value is unchangable, and only accept basic type like String , Int
- associated value can be changed and it accept more type than raw value(like opject)
+ associated value can be changed and it accept more type than raw value(like object)
  I paste the example from apple website below for my reference
  */
 enum Barcode {
