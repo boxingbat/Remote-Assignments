@@ -17,7 +17,7 @@ class Animal {
     func eat() {
         print("I eat everything")
     }
-    var gender: Gender
+    let gender: Gender
     
     init(gender: Gender) {
         self.gender = gender
@@ -237,7 +237,7 @@ struct Person {
 }
 
 protocol PoliceMan {
-    func arrestCrimnals() -> Void
+    func arrestCrimnals()
 }
 
 
@@ -254,14 +254,14 @@ extension Person: PoliceMan {
 //return void.
 
 protocol toolMan {
-    func fixComputer() -> Void
+    func fixComputer()\
 }
 //4. Add a property toolMan to the struct Person with data type ToolMan .
 
 //5. Declare a struct named Engineer that conforms to the ToolMan protocol.
 
 struct Engineer: toolMan {
-    func fixComputer() -> Void {
+    func fixComputer(){
         return
     }
 }

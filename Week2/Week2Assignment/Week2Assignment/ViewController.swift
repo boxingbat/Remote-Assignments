@@ -14,12 +14,19 @@ class ViewController: UIViewController {
     
     @IBAction func ShowAnotherFunAct(_ sender: UIButton) {
         let randomNum = Int.random(in: 0...6)
-        let textAndbackground = textAndBackGround[randomNum]
-        
+        var textAndbackground: (color: UIColor, text: String)
+
+        if randomNum < textAndBackGround.count {
+            let textAndBackgroundValue = textAndBackGround[randomNum]
+            textAndbackground = (textAndBackgroundValue.color, textAndBackgroundValue.text)
+        } else {
+            let defaultValue = textAndBackGround[0]
+            textAndbackground = (defaultValue.color, defaultValue.text)
+        }
+
         view.backgroundColor = textAndbackground.color
         FunAct.text = textAndbackground.text
     }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         FunAct.text = "Tap The Button!"
