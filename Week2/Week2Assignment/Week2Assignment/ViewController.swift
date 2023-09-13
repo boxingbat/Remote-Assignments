@@ -9,24 +9,19 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var FunAct: UILabel!
-    
-    
-    @IBAction func ShowAnotherFunAct(_ sender: UIButton) {
-        let randomNum = Int.random(in: 0...6)
-        var textAndbackground: (color: UIColor, text: String)
+@IBOutlet weak var FunAct: UILabel!
 
-        if randomNum < textAndBackGround.count {
-            let textAndBackgroundValue = textAndBackGround[randomNum]
-            textAndbackground = (textAndBackgroundValue.color, textAndBackgroundValue.text)
-        } else {
-            let defaultValue = textAndBackGround[0]
-            textAndbackground = (defaultValue.color, defaultValue.text)
-        }
+
+@IBAction func ShowAnotherFunAct(_ sender: UIButton) {
+    
+    let counts = textAndBackGround.count
+    let randomNum = Int.random(in: 0...(counts-1))
+        let textAndbackground = textAndBackGround[randomNum]
 
         view.backgroundColor = textAndbackground.color
         FunAct.text = textAndbackground.text
     }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         FunAct.text = "Tap The Button!"
