@@ -107,7 +107,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="Submit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pZ4-YF-a6c"/>
+                                    <action selector="submit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CSE-58-IGS"/>
                                 </connections>
                             </button>
                         </subviews>

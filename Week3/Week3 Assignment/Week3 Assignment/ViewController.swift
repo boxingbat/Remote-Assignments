@@ -51,7 +51,7 @@ class ViewController: UIViewController {
     }
     
     
-    @IBAction func Submit(_ sender: Any) {
+    @IBAction func submit(_ sender: Any) {
         let selectedIndex = Switch.selectedSegmentIndex
         if selectedIndex == 0 {
             checkAccountTextField()
@@ -63,7 +63,7 @@ class ViewController: UIViewController {
             checkCheckPasswordTextField()
             signUp()
         }
-        func PresentAlert(title: String, message: String) {
+        func presentAlert(title: String, message: String) {
             let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
             let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
             alertController.addAction(okAction)
@@ -74,13 +74,13 @@ class ViewController: UIViewController {
             
             // Check if PasswordTextField == CheckTextField
             if PasswordTextField.text != CheckTextField.text {
-                PresentAlert(title: "Error", message: "Signup Fail")
+                presentAlert(title: "Error", message: "Signup Fail")
             }
         }
         func checkAccountTextField(){
             //Empty Check
             if let text = AccountTextField.text, text.isEmpty {
-                PresentAlert(title: "Error", message: "Account should not be empty")
+                presentAlert(title: "Error", message: "Account should not be empty")
             } else {
                 return
             }
@@ -90,7 +90,7 @@ class ViewController: UIViewController {
         func checkPasswordTextField(){
             //Empty Check
             if let text = PasswordTextField.text, text.isEmpty {
-                PresentAlert(title: "Error", message: "Password should not be empty")
+                presentAlert(title: "Error", message: "Password should not be empty")
             } else {
                 return
             }
@@ -99,7 +99,7 @@ class ViewController: UIViewController {
         func checkCheckPasswordTextField() {
             //Empty Check
             if let text = CheckTextField.text, text.isEmpty {
-                PresentAlert(title: "Error", message: "Check Password should not be empty")
+                presentAlert(title: "Error", message: "Check Password should not be empty")
             } else {
                 return
             }
@@ -113,10 +113,10 @@ class ViewController: UIViewController {
             
             if AccountTextField.text == "appworks_school" && PasswordTextField.text == "1234"{
                 // Login successful
-                PresentAlert(title: "Sucess", message: "Login Sucessful")
+                presentAlert(title: "Sucess", message: "Login Sucessful")
             } else {
                 // Login failed
-                PresentAlert(title: "Error", message: "Login Fail")
+                presentAlert(title: "Error", message: "Login Fail")
                 
             }
         }
