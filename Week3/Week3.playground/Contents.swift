@@ -42,12 +42,9 @@ findOdd(4)
 func printTriangle(layers: Int) {
     // TODO: print a triangle
     for i in 1...layers {
-        for j in 1...i {
+        for _ in 1...i {
             print("*", terminator: "")//避免換行
-            if i == j {
-                print()//等達到需要的星號數量再換行
-            }
-        }
+        }; print()//等達到需要的星號數量再換行
     }
 }
 //For example, here’s what the output of printTriangle(Layers:5 )  should be:
