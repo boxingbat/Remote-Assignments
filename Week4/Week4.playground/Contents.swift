@@ -42,3 +42,35 @@
 
  
  */
+
+//Part 4
+
+func printPramid(layer:Int) {
+    let length = (layer*2)-1
+    for i in 1...layer{
+        for j in 1...length{
+            let upLimit = (layer+i)-1
+            let downLimit = (layer-i)+1
+            if j <= upLimit && j >= downLimit {
+                print("*", terminator: "")
+            }else{
+                print(" ", terminator: "")
+            }
+        }
+        print()
+    }
+}
+
+printPramid(layer: 5)
+printPramid(layer: 7)
+printPramid(layer: 3)
+
+/*
+ part 5
+ 
+ 我希望能做一個APP 讓用戶可以在上面看到股票/虛擬貨幣走勢 (連接類似yahoo finance的公開API)
+ 目前想到的功能包括 用戶註冊登入(或是連接metamask),提供基本的投資策略並在給用戶指定投資組合的回測數據
+ 
+ 
+ 
+ */
