@@ -8,9 +8,15 @@
 import UIKit
 
 struct Station: Decodable {
-    let stationID: String
-    let stationName: String
-    let stationAddress: String
+    let id: String
+    let name: String
+    let address: String
+    
+    enum CodingKeys: String, CodingKey{
+        case id = "stationID"
+        case name = "stationName"
+        case address = "stationAddress"
+    }
 }
 class ViewController: UIViewController {
     
@@ -37,9 +43,9 @@ class ViewController: UIViewController {
                         let station = try decoder.decode(Station.self, from: data)
                         
                         OperationQueue.main.addOperation {
-                            self.stationIDLabel.text = station.stationID
-                            self.stationNameLabel.text = station.stationName
-                            self.addressLabel.text = station.stationAddress
+                            self.stationIDLabel.text = station.id
+                            self.stationNameLabel.text = station.name
+                            self.addressLabel.text = station.address
                         }
                     } catch {
                         print("error: \(error)")
